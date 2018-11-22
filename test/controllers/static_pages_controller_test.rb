@@ -2,7 +2,7 @@ require 'test_helper'
 
 class StaticPagesControllerTest < ActionDispatch::IntegrationTest
   test "should get home" do
-    get static_pages_home_url
+    get home
     assert_response :success
   end
 
@@ -12,8 +12,8 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
   end
 
   def home
-  	render plain: "Hello"
   end
+
   def help
   end
 
