@@ -11,4 +11,10 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  def home
+  	render plain: "Hello"
+  end
+  def help
+  end
+
 end
