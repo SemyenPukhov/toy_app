@@ -149,3 +149,7 @@ margin: 0 0 30px 0;
 color: $state-danger-text;
 }
 }
+
+.alert-failed {
+	background: rgba(255,0,0,0.3);
+}

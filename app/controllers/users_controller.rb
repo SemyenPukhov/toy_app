@@ -9,6 +9,7 @@ class UsersController < ApplicationController
   		flash[:success] = "Welcome to the Sample App!"
   		redirect_to @user
   	else
+  		flash[:failed] = "Something goes wrong. Check fields."
   		render 'new'
   	end
   end
@@ -16,6 +17,7 @@ class UsersController < ApplicationController
   def show
   	@user = User.find(params[:id])
   end
+  
   private 
   	def user_params
   		params.require(:user).permit(:name, :email, :password, :password_confirmation)

@@ -6,6 +6,7 @@
                           'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <%= render 'layouts/bootstrap' %>
   <%= render 'layouts/shim'%>
 </head>
 <body>
@@ -14,6 +15,7 @@
 		<% flash.each do |message_type, message| %>
 			<div class="alert alert-<%= message_type %>"><%= message %></div>
 		<% end %>
+		<% flash.clear %>
 		<%= yield %>
 	</div>
 	<%= render('layouts/footer') %>
